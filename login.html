@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        body{
+            background-image: url('image/main_background.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            height: 88vh;
+        }
+        footer{
+            background-image: linear-gradient(to top,#2f2f3d,white);
+        }
+        .register li input[type=radio]{
+            display: none;
+        }
+        
+        .register li input[type=radio]:checked ~ label{
+            color: rgb(0, 255, 34);
+            z-index: 9;
+            background-color: rgba(6, 6, 41, 0.819);
+            
+        }
+    </style>
+</head>
+<body>
+
+
+<!-----------------------------nevbar---------------------->
+    <nev class="nev fix_nev">
+        <div class="logo">
+            <img src="image/logo.png" alt="logo">
+        </div>
+        <div class="search">
+            <form action="#">
+                <input type="text" placeholder=" Search Book" name="search">
+                <button>
+                    <i class="fa fa-search" style="font-size: 18px;"></i>
+                </button>
+            </form>
+        </div>
+        <div class="nev_right">
+            <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="aboutus.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html">Login</a>
+        </div>
+    </nev>
+
+<!-------------------------------login---------------------------->
+
+    <div class='register'>
+        <div class ='tab'> 
+
+            <li>
+                <input type="radio"  onclick=';document.getElementById("f2").style.display="block";document.getElementById("f3").style.display="none";' name="f1" id="fa" value="login" checked>
+                <label for="fa">Login</label>
+            </li>
+            <li>
+                <input type="radio"  onclick='document.getElementById("fa").style.backgroundColor=" rgba(6, 6, 41, 0.419)"; document.getElementById("f3").style.display="block";document.getElementById("f2").style.display="none";' name="f1" id="fb" value='signup'>
+                <label for="fb">Sign Up</label>
+
+            </li>
+        </div>
+
+    
+        <form id='f2' name='signin_form'>
+            <div class ='gap'>
+                <label for="uemail">Email</label>
+                <br>
+                <input type="uemail" name="uemail" id="uemail">
+            </div>
+            <div class ='gap'>
+                <label for="upassword">Password</label>
+                <br>
+                <input type="upassword" name="upassword" id="upassword">
+            </div>
+            <div class ='inp gap'>
+                <input type="submit" id='submitf2' value="Submit">
+                <button id="forget" herf= "#">Forget</button>
+            </div>
+        </form>
+
+
+
+    
+    
+        <form id="f3" name="signup_form">
+            <div class ='gap'>
+                <label for="fname">Name</label>
+                <br>
+                <input type="text" name="fname" id="fname" placeholder="Full Name">
+            </div>
+            <div class ='gap'>
+                <label for="email">Email</label>
+                <br>
+                <input type="email" name="email" id="email" placeholder="Your Email">
+            </div>
+            <div class="gap">
+                <label for="mno">Mobile Number</label>
+                   <br>
+                   <input type="tel" name="mno" id="mno" placeholder="Mobile number">
+                
+            </div>
+            <div class="gap">
+
+                <label for="country">Country</label>
+                   <br>
+                   <input type="text" name="country" id="country" placeholder="Country">
+            </div>
+            
+            <div class ='gap'>
+                <label for="password">Password</label>
+                <br>
+                <input type="password" name="password" id="password" placeholder="Password">
+            </div>
+            <div class ='gap'>
+                <label for="confo">Confirm Password</label>
+                <br>
+                <input type="password" name="confo" id="confo" placeholder="confirm password">
+            </div>
+            
+            <div class='inp gap'>
+                <input type="submit" id='submitf3' value="submit">
+                <input type="reset" id='reset' value="reset">
+            </div>
+        </form>
+    </div>
+
+
+
+<!-----------------------------------footer---------------------------------------------------------->
+    <footer id="foo">
+        <div class="logo">
+            <img src="image/logo.png" alt="logo">
+
+       </div>
+       <hr>
+
+        <div class="doc">
+            <div class="pages">
+                <h3>Pages</h3>
+                <a href="index.html">Home</a>|
+                <a href="products.html">Products</a>|
+                <a href="aboutus.html">About</a>|
+                <a href="contact.html">Contact</a>|
+                <a href="login.html">Login</a>
+
+            </div>
+            <h3>Documents</h3>
+            <a href="#">Private Policy</a>|
+            <a href="#">Term of User</a>|
+            <a href="#">Refund Policy</a>
+        </div>
+        <div class="socialmedia">
+            <h3>Follow us</h3>
+            <a class="icon" target="_blank" href="https://www.facebook.com/"><img src="image/icon/facebook.png" alt="facebook"></a>
+            <a class="icon" target="_blank" href="https://www.instagram.com/"><img src="image/icon/insta.png" alt="instagram"></a>
+            <a class="icon" target="_blank" href="https://in.linkedin.com/"><img src="image/icon/linkedin.png" alt="linkedin"></a>
+            <a class="icon" target="_blank" href="#"><img src="image/icon/share.png" alt="share"></a>
+        </div>
+        <div class="contact">
+            <h3>Contact us</h3>
+            <a class="icon" target="_blank" href="te: +919876543210"><img src="image/icon/call.png" alt="call"></a>
+            <a class="icon" target="_blank" href="mailto: Example@email.com"><img src="image/icon/email.png" alt="email"></a>
+            <a class="icon" target="_blank" href="https://api.WhatsApp.com/send?phone=+919876543210"><img src="image/icon/whatsapp.png" alt="whatsapp"></a>
+            <a class="icon" target="_blank" href="https://www.google.com/maps/@21.2318231,81.6366436,15z"><img src="image/icon/location.png" alt="location"></a>
+        </div>
+        <hr>
+        <p>Copyright &copy; 2021 1stop. All right reserved</p>
+
+    </footer>
+
+    <!-------------------------------------------------------->
+</body>
+</html>

@@ -1,0 +1,662 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#blogtheme{
+    background: linear-gradient(-45deg,rgb(253, 253, 253),rgba(133, 236, 228, 0.897),rgba(238, 181, 225, 0.795),rgb(193, 233, 160));
+    background-size: 400% 400%;
+    top:10em;
+    animation: gradient 10s ease infinite;
+   padding:20px;
+   border-radius: 10px;
+}
+@keyframes gradient{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+
+} 
+
+.search input[type=text]{
+    width:70%;
+    min-width: 20px;
+    height:25px;
+    border-radius:25px;
+    border:none;
+    float: left;
+    border-bottom: 2px solid orangered;
+
+}
+.search button:hover {
+    color:orangered;
+    animation: rotation 1s ease infinite;
+}
+.search button:active{
+    color: rgb(124, 99, 90);
+}
+@keyframes rotation {
+    0%{
+        rotate: 0deg;
+    }
+    50%{
+        rotate:-50deg;
+    }
+}
+.search{
+    display: inline-block;
+    width:25%;
+    min-width: 200px;
+    padding-top: 20px;
+    float:left;
+    margin:7px;
+}
+  
+.search button{
+    background-color: white;
+    color: #090938;
+    float: left;
+    padding: 5px 10px;
+    margin-right: 16px;
+    font-size: 12px;
+    margin: 0px 10px;
+    border: none;
+    cursor: pointer;
+} 
+
+.logo{
+    float: left;
+    width: 35%;
+    min-width: 200px;
+    padding: 10px;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+.logo > img{
+    width:150px; 
+}
+
+.nev{
+    background-color: white;
+    z-index: 99;
+    padding:10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    box-shadow: 0px 5px 30px 5px rgba(0,0,0,0.2);
+}
+
+.fix_nev{
+    position: fixed;
+    top:0;
+    right: 0;
+    left:0;
+}
+.nev_right{
+    position: relative;
+    float: right;
+    width:40%;
+    padding-top: 30px;
+    padding-left: 50px;
+}
+.nev a {
+    margin-top: 100px;
+    text-decoration: none;
+    margin-right: 20px;
+    color: #090938;
+    font-weight: bold;
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+}
+.nev a:hover{
+    color: rgb(105, 87, 80);
+    border-bottom: 2px solid orangered;
+    transition: all .5s ease;
+}
+@media screen and (max-width:900px) {
+    .nev_right{
+        display: block;
+        width:100%;
+        clear: both;
+        
+    }
+    .nev{
+        display:block;
+    }
+    .nev a{
+        margin-top: 0px;
+        padding-top:0px;
+    }
+    .search form{
+        display: none;
+    }
+    .search{
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    
+}
+
+.main{
+    background-image: url('image/main_background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 88vh;
+    
+}
+.main .main_content{
+    text-align: center;
+    margin: 100px 10% 0px 10%;
+    padding-top:12%;
+    color: white;
+}
+.main > .main_content > h2{
+    text-align: center;
+    font-size: 5em;
+    color: #090938;
+}
+.main .main_content .discription{
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+    padding:50px;
+    opacity: 0.8;
+    line-height: 30px;
+    padding-top: 0px;
+    padding-right:15%;
+    padding-left: 15%;
+    font-size: 18px;
+    font-weight: 800;
+    color: rgb(5, 5, 5);
+    text-align: center;
+
+}
+.btn  a{
+    text-decoration: none;
+    margin:10px;
+    padding:10px 20px;
+    border: 2px solid white;
+    color:white;
+    background-color: #0e0e42;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.btn  a:hover{
+    background-color: #040429;
+    transition: 0.5s;
+    box-shadow: 0px 0px 20px 0px black;
+}
+.btn  a:active{
+    background-color: #02021b;
+    box-shadow: 0px 0px 5px 0px black;
+    transition: 0.2s;
+}
+#products,.keypoint{
+    text-align: center;
+    margin:10px 5% 10px 5%;
+    
+}
+#products h2,.keypoint h2, .testi h2, .about h2, .googlemap h2,.blog h2 {
+    font-size: 50px;
+    padding: 10px;
+    margin-top: 70px;;
+    margin-bottom: 50px;
+    text-decoration: underline;
+    text-align: center;
+    color: #090938;;
+}
+#products .product_container{
+    display:flex;
+    margin:10px;
+
+    text-align: center;
+    
+}
+#products .product_container .item{
+    width:33%;
+    overflow-x: hidden;
+    padding: 5px;
+    margin:5px;
+    display: inline-block;
+    box-shadow: 0px 0px 10px 0px black;
+}
+#products .product_container .item img{
+    width:100%;
+    max-width: 250px;
+    max-height: 400px;
+    height:300px;
+    margin-bottom: 10px;
+    
+}
+
+  #products .product_container .item table {
+    width: 100%;
+    margin:10px;
+    border-bottom: 2px solid orangered;
+  }
+  #products .product_container .item p{
+      padding:0px 10px;
+  }
+  #products .product_container .item table td{
+      font-size: 18px;
+
+  }
+  #products .product_container .item table th{
+      font-size: 18px;
+      background-color: rgb(255, 68, 0);
+      padding:3px;
+      color: white;
+      text-align: center;
+  }
+  #products .product_container .item .btn{
+      margin:20px;
+  }
+  #products .product_container .item .btn a{
+      padding:10px 30px;
+  }
+  #products >.product_container .item:hover{
+      
+      box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.822);
+      transition: 0.5s;
+  }
+ #products .more{
+    margin: 20px;
+ }
+ .keypoint .rightkey img{
+    width:100%;
+    height: 500px;
+ }
+ .keypoint .rightkey{
+     width: 70%;
+     margin:5px;
+     margin-top: 10px;;
+     float:left;
+
+ }
+ .keypoint .leftkey{
+     width: 23%;
+     float:left;
+    padding:10px;
+    height: 500px;
+    margin:5px;
+    overflow:auto;
+    list-style-type: none;
+  
+ }
+.keypoint{
+    margin:70px 6% 10px 6%;
+
+}
+.keypoint .leftkey li{
+    padding: 5px;
+    border-left: 5px solid orangered;
+    border-radius: 5px;
+    text-align: left;
+    width:100%;
+   
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px 0px black;
+    overflow:auto;
+}
+.keypoint .leftkey li:hover{
+    border:2px solid white;
+    border-radius: 5px;
+    animation: borderani 1.5s linear infinite ;
+    transition: 0.5s;
+    
+}
+@keyframes borderani {
+    0%{
+        
+        border-right-color:rgb(255, 255, 255);
+        border-bottom-color: rgb(255, 255, 255);
+        border-left-color:orangered;
+        border-top-color:orangered;
+        transition: 0.3s;
+    }
+    33%{
+        border-right-color:orangered;
+        border-bottom-color:rgb(255, 255, 255);
+        border-left-color:rgb(255, 255, 255);
+        border-top-color:orangered;
+        transition: 0.3s;
+    }
+    66%{
+        border-right-color:orangered;
+        border-left-color:rgb(255, 255, 255);
+        border-bottom-color: orangered;
+        border-top-color:rgb(255, 255, 255);
+        transition: 0.3s;
+    }
+    
+    100%{
+        border-right-color:rgb(255, 255, 255);
+        border-top-color:rgb(255, 255, 255);
+        border-bottom-color: orangered;
+        border-left-color:orangered;
+        transition: 0.3s;
+    }
+}
+.testi{
+    padding: 50px;
+    display:block;
+    clear: both;
+    margin-top: 100px;
+   
+}
+.testi .testi_container{
+    margin: 20px 10% 10px 10%;
+    text-align: center;
+}
+.testi .testi_container .item{
+    width:100%;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.testi .testi_container .item .item_img{
+    width: 100px;
+    height:100px;
+    text-align: center;
+    margin:20px auto 20px auto;
+}
+.testi .testi_container .item .item_img img{
+    width:100%;
+    height:100%;
+    border-radius: 100%;
+   
+}
+.testi .testi_container .item h3{
+    margin:30px;
+    font-size: 35px;
+}
+.testi .testi_container .item p{
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.icon > img{
+    width:40px;
+    height:40px;
+    opacity:0.6;
+    margin:10px
+}
+.icon > img:hover{
+   opacity: 1;
+   width:50px;
+    height:50px;
+    margin:5px;
+    transition: 0.3s;
+}
+.icon{
+    padding:5px;
+}
+footer{
+   text-align: center;
+   background-image: linear-gradient(to top,#0e0e42af,white);
+   padding:100px;
+   color: #090938;
+   
+}
+
+footer .contact,.socialmedia,.doc,.pages{
+    margin:15px;
+   
+}
+.doc > a,.pages>a{
+    padding:5px;
+    font-size: 17px;
+    color: orangered;
+}
+footer > .logo{
+    width: 100%;
+    padding:0px;
+    text-align: center;
+    margin:20px auto 20px auto;
+}
+footer > .logo>img{
+    width: 200px;
+}
+footer > h3{
+    font-size: 30px;
+
+}
+
+
+.cmtForm input,.cmtForm > select, .cmtForm > textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit],#forget,#reset {
+    background-color: #09093d;;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    border:2px solid white;
+  }
+  
+  input[type=submit]:hover,#forget:hover,#reset:hover  {
+    background-color: #040429;
+    box-shadow: 0px 0px 20px 0px black;
+    color: white;
+  }
+  input[type=submit]:active,#forget:active,#reset:active {
+      background-color: rgb(0, 0, 0);
+      box-shadow: 0px 0px 0px 0px black;
+      transition: 0.5s;
+  }
+.myform{
+    width:100%;
+    background: linear-gradient(-45deg,rgb(253, 253, 253),rgba(63, 69, 88, 0.897),white);
+  
+    background-size: 400% 400%;
+    top:10em;
+    animation: gradient 10s ease infinite;
+    margin-top: 100px ;
+    padding:10px
+}
+  
+  .cmtForm{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    min-width:300px;
+    width:100%;
+    max-width: 900px;
+    margin: 50px auto 50px auto;
+    box-shadow: 0px 0px 20px 0px black;
+    
+  }
+.cmtForm:hover{
+    animation: borderani 1.5s linear infinite ;
+    transition: 0.5s;
+
+}
+
+.gmap{
+    padding:20px;
+    width:70%;
+    margin: 50px auto 50px auto;
+}
+iframe{
+    width:100%;
+    height:500px;
+}
+.googlemap{
+    margin-top: 200px;
+    width:100%;
+    margin-bottom: 0px;
+}
+.googlemap  .address span b{
+    font-size: 23px;
+    text-align: left;
+}
+.googlemap  .address span{
+    font-size: 18px;
+   
+}
+.address{
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+
+.aboutus{
+    margin:200px 15% 100px 15%;
+    text-align: center;
+}
+.about >p {
+    font-size: 18px;
+    justify-content:space-around;
+}
+
+/*---------------------blog---------------*/
+.blog{
+    margin: 200px auto 100px auto;
+    width:80%;
+    
+}
+.fullitems{
+    display: flex;
+    margin:20px
+}
+
+.superfont{
+    font-size: 23px;
+    font-weight: bold;
+    font-style: italic;
+}
+.lowerfont{
+    font-size: 20px;
+    font-weight: bold;
+}
+.blog  #blogDetails li{
+    list-style-type: none;
+    padding:5px;
+}
+.blogtitle{
+    padding: 20px;
+}
+#blogImg{
+    width:30%;
+}
+#blogImg img{
+    width: 100%;
+    min-width: 200px;
+    max-width: 350px;
+    height:400px;
+}
+.blogtitle >span{
+    font-size: 35px;
+    font-weight: bolder;
+    font-style: oblique;
+}
+#blogDetails{
+    width:70%;
+}
+#blogContent{
+    text-align: center;
+    margin:20px;
+    display: block;
+    font-size: 18px
+
+}
+#blogContent p{
+    margin-top: 20px;
+}
+.register{
+    margin-top: 200px; 
+    margin-left: auto; 
+    margin-right: auto;
+    margin-bottom: 200px;
+    min-width:300px;
+    width:40%; 
+    
+}
+.register form{
+    background-color: rgba(6, 6, 41, 0.719);
+    color: rgb(2, 0, 0);
+}
+.register form input{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+.register #forget{
+    width:100%;
+}
+.register label, .register #submitf2,.register #submitf3,.register #reset,.register #forget{
+    font-size: 18px;
+    color: white;
+}
+
+.register .inp{
+    bottom :10px;
+}
+.register > .tab{
+    margin-left: auto; margin-right: auto;
+}
+.register > .tab>li{
+    display: inline-block; border: 2px solid grey;
+}
+.register > form{
+    display: none;
+    width:100%; height:100%; 
+    padding:10px;
+}
+.register >#f2{
+    display: block;
+}
+.register li label{
+    background-color: rgba(6, 6, 41, 0.419);
+    z-index: 1;
+    
+    color: white;
+    margin: 0px;
+    padding:10px 30px;
+
+}
+.register>#f3{
+    display: none;
+
+}
+
+.register .gap{
+    padding:10px;
+}
+.register li input[type=radio]{
+    display: none;
+}
+
+.register li input[type=radio]:checked ~ label{
+    color: rgb(0, 255, 34);
+    z-index: 9;
+    background-color: rgba(6, 6, 41, 0.819);
+    
+}
+.register li #fb{
+    left: 20px;
+}
