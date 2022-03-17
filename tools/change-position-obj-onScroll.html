@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main {
+            width: 100%;
+            height: 200vh;
+            border: 2px solid rebeccapurple;
+        }
+
+        #main>.man {
+            width: 30px;
+            height: 40px;
+            border: 2px solid grey;
+            margin: 10px;
+
+
+        }
+
+        #m1 {
+            position: fixed;
+            background-color: rgb(99, 209, 99);
+            transform: translateX(10px);
+            transition: 0.5s;
+            bottom: 20px;
+
+        }
+
+        #m2 {
+            position: absolute;
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div class="man" id="m1"></div>
+        <div class="man" id="m2"></div>
+
+    </div>
+    <script>
+        const m1s = document.getElementById('m1');
+        const mainwin = document.querySelector("#main");
+        const output = document.querySelector(".output");
+        // window.addEventListener('scroll', event => {
+        //    m1s.style.transform = "translateX(100px)";
+        //        console.log("work ", m1s.style.right);
+        //   })
+        
+        console.log("work");
+        var objpos = 10;
+
+        mainwin.onwheel = e => {
+            if (e.deltaY >= 0) {
+                // Scrolling Down with mouse
+                objpos = objpos + 20;
+                console.log('Scroll Down ' + objpos);
+                m1s.style.transform = 'translateX(' + objpos + 'px)';
+            } else {
+                // Scrolling Up with mouse
+                objpos = objpos - 20;
+
+                console.log('Scroll Up ', objpos);
+                m1s.style.transform = "translateX(" + objpos + "px)";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
